@@ -1,12 +1,16 @@
+--Data Analytics Project
+--Create employees table with emp_id as primary key.
 create database Data_Analytics;
-create table employees(emp_id int primary key,
- emp_name varchar(20),
- dept_id int,
- foreign key(dept_id) references departments(dept_id), 
- manager_id int, 
- salary decimal, 
- hire_date DATE, 
- city varchar(20));
+create table employees(
+emp_id int primary key,
+emp_name varchar(20),
+dept_id int,
+foreign key(dept_id) references departments(dept_id), 
+manager_id int, 
+salary decimal, 
+hire_date DATE, 
+city varchar(20)
+ );
 insert into employees values(101,'Divya',10,51,100000,'2020-01-10','Chennai'),
 (102,'Meena',11,52,99000,'2020-04-11','Salem'),
 (103,'Riya',12,53,94000,'2020-01-10','CBE'),
